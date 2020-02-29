@@ -29,6 +29,20 @@ $(".submit").on("click", function () {
     console.log(newReservation);
 });
 
+// TESTING
+
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "home.html"));
+});
+
+app.get("/reserve", function (req, res) {
+    res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
+app.get("/tables", function (req, res) {
+    res.sendFile(path.join(__dirname, "tables.html"));
+});
+
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
