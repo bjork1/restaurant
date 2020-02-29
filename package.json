@@ -1,0 +1,24 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjork1/restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjork1/restaurant/issues"
+  },
+  "homepage": "https://github.com/bjork1/restaurant#readme",
+  "dependencies": {
+    "epress": "0.0.1-security",
+    "express.js": "^1.0.0"
+  }
+}
