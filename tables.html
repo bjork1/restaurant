@@ -16,40 +16,47 @@
     <div class="jumbotron center">
       <h1 class="display-4">Hot Restaurant</h1>
       <hr class="my-4" />
-      <p>We only have 5 tables! Book your seat before they all are gone!</p>
-      <a class="btn btn-primary btn-lg" href="reserve.html" role="button"
+      <p>Current Reservations and Waiting List</p>
+      <a class="btn btn-danger btn-lg" href="reserve.html" role="button"
         >Make reservation</a
       >
       <a class="btn btn-primary btn-lg" href="home.html" role="button">Home</a>
     </div>
 
     <div class="container">
+      <button id="test">Test</button>
       <div class="panel-default">
         <div class="panel-heading">
-          Heading
+          Current Reservations
         </div>
-        <div class="panel-body">
+        <div id="send" class="panel-body">
           <div class="well">
-            <h2><span class="lable label-primary">1</span> | First person</h2>
+            <h2 id="response">
+              <span class="lable label-primary response">1</span>
+              <div id="empty"></div>
+            </h2>
           </div>
           <div class="well">
-            <h2><span class="lable label-primary">2</span> | Second person</h2>
+            <h2>
+              <span class="lable label-primary response">2</span>
+              <div id="empty2"></div>
+            </h2>
           </div>
           <div class="well">
-            <h2><span class="lable label-primary">3</span> | Third person</h2>
+            <h2><span class="lable label-primary response">3</span></h2>
           </div>
           <div class="well">
-            <h2><span class="lable label-primary">4</span> | Fourth person</h2>
+            <h2><span class="lable label-primary response">4</span></h2>
           </div>
           <div class="well">
-            <h2><span class="lable label-primary">5</span> | Fifth person</h2>
+            <h2><span class="lable label-primary response">5</span></h2>
           </div>
         </div>
       </div>
 
       <div class="panel-default">
         <div class="panel-heading">
-          Heading
+          Waiting List
         </div>
         <div class="panel-body">
           <div class="well">
@@ -86,4 +93,43 @@
       </div>
     </div>
   </body>
+  <script>
+    ///////gotten
+    let thing = [
+      {
+        name: "George"
+      },
+      {
+        name: "Hank"
+      }
+    ];
+
+    for (let i = 0; i < thing.length; i++) {
+      $("#send").append(
+        `<div class="well">
+            <h2 id="response">
+              <span class="lable label-primary response">` +
+          i +
+          `</span>
+              <div id="empty">` +
+          thing[i].name +
+          `</div>
+            </h2>
+          </div>`
+      );
+    }
+
+    $("#test").click(function() {});
+
+    /*
+      if ($("#empty").is(":empty")) {
+        console.log("Yes");
+        $("#empty").append(" | Hello");
+      } else if ($("#empty2").is(":empty")) {
+        console.log("Yes2");
+        $("#empty2").append(" | Hello there");
+      } else console.log("No");
+    });
+    */
+  </script>
 </html>
